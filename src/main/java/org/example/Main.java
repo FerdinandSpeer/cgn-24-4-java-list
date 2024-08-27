@@ -68,6 +68,12 @@ public class Main {
 
         school.printAllStudents();
 
+        //Find a Student by studentID:
+        school.findStudentByID("S003");
+
+        //Remove a Student:
+        school.removeStudent(new Student("Harry","Potter","S003"));
+
     }
 
 }
