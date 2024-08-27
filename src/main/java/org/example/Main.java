@@ -1,10 +1,15 @@
 package org.example;
 
+import org.example.Challenge2.School;
+import org.example.Challenge2.Student;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
+        //Session2:
+
         //Arrays haben eher Nachteile, insbesondere wenn man diese bearbeiten möchte
         int[] ints = new int[2];
         int[] ints2 = {1,2,3};
@@ -41,5 +46,28 @@ public class Main {
         for (Integer currywurst:integers){
             System.out.println(currywurst);
         }
+        System.out.println("Ab hier Challenge2");
+        //Challenge2:
+
+        //Step 2: Create a Java List for elements of type "Student" and add multiple students.
+        List<Student> students = new ArrayList<>();
+
+        students.add(new Student("Ferdinand","Speer","S001"));
+        students.add(new Student("Stephen","King","S002"));
+        students.add(new Student("Harry","Potter","S003"));
+        students.add(new Student("James","Bond","S007"));
+
+        System.out.println("_____________________________");
+        //Step 4: Implement a method to print all students of the school (as text, to the console).
+        School school = new School();
+
+        school.addStudent(new Student("Ferdinand","Speer","S001"));
+        school.addStudent(new Student("Stephen","King","S002"));
+        school.addStudent(new Student("Harry","Potter","S003"));
+        school.addStudent(new Student("James","Bond","S007"));
+
+        school.printAllStudents();
+
     }
+
 }
