@@ -18,8 +18,18 @@ public class School {
         }
     }
     //Step 5: Add a method to find a student by their ID. The found student should be returned.
-
+    public Student findStudentByID(String studentID){
+        for (Student student:studentsToSchool){
+            if (student.getStudentID().equals(studentID)){
+                return student;
+            }
+        }
+        return null;
+    }
 
     //Step 6: Create a method to remove a student from the school.
+    public void removeStudent(Student student){
+        studentsToSchool.remove(student);
+    }
 
 }
